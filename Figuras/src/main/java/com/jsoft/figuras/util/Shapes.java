@@ -6,6 +6,7 @@ import java.util.List;
 
 public final class Shapes {
 
+	private static final String CRLF = System.lineSeparator();
 	private static final String SPACE = " ";
 	private static final String CHARACTER = "*";
 	private static final int DEFAULT_SIZE = 3; 
@@ -19,7 +20,7 @@ public final class Shapes {
 	}
 	
 	public static String square(int tamaño) {
-		return String.join(System.lineSeparator(), buildShapeWithoutSaces(tamaño, tamaño));
+		return String.join(CRLF, buildShapeWithoutSaces(tamaño, tamaño));
 	}
 	
 	public static String triangle() {
@@ -29,7 +30,7 @@ public final class Shapes {
 	public static String triagle(int tamaño) {
 		List<String> lineas = buildShapeWithoutSaces(tamaño, 0);
 		fillSpaces(tamaño, lineas);
-		return String.join(System.lineSeparator(), lineas);
+		return String.join(CRLF, lineas);
 	}
 	
 	public static String diamond() {
@@ -39,12 +40,12 @@ public final class Shapes {
 	public static String diamond(int tamaño) {
 		StringBuilder sb = new StringBuilder();
 		sb.append(triagle(tamaño));
-		sb.append(System.lineSeparator());
+		sb.append(CRLF);
 		
 		List<String> lineas = buildShapeWithoutSaces(tamaño - 1, 0);
 		fillSpaces(tamaño, lineas);
 		Collections.reverse(lineas);
-		sb.append(String.join(System.lineSeparator(), lineas));
+		sb.append(String.join(CRLF, lineas));
 		
 		return sb.toString();
 	}

@@ -1,4 +1,4 @@
-package com.jsoft.figuras;
+package com.jsoft.shapes;
 
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.Matchers.is;
@@ -12,7 +12,7 @@ import com.jsoft.figuras.util.Shapes;
 /**
  * Unit test for simple App.
  */
-public class FigurasTest {
+public class ShapesTest {
 
 	@Test
 	public void pruebaAlturasquare() {
@@ -31,6 +31,8 @@ public class FigurasTest {
 		String actual = Shapes.diamond();
 		assertThat(5, is(getAlturaFigura(actual)));
 	}
+	
+	/**** Test square ****/
 	
 	@Test
 	public void pruebaAnchoLineaUnosquareGenerico() {

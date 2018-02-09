@@ -1,4 +1,4 @@
-package com.jsoft.figuras;
+package com.jsoft.shapes;
 
 import com.jsoft.figuras.util.Shapes;
 
