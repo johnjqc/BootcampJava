@@ -1,0 +1,44 @@
+.gradle
+
+/build/
+/*/build/
+/*/*/build/
+
+/out/
+/*/out/
+/*/*/out/
+
+# Log file
+*.log
+/log/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+.iml
+.ipr
+.iws
+
+# Compiled sources #
+*.class
+/*/*/*.class
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Cache of project
+.gradletasknamecache
+
+*.iml
+/.idea/
+/gradle/
+.DS_Store
+
+
