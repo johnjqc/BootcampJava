@@ -1,6 +1,7 @@
 package com.jsoft.bootcampsoftware.functions.test
 
 import com.jsoft.bootcampsoftware.functions.Funciones
+import com.jsoft.bootcampsoftware.functions.Funciones.esMultiplo
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
 import java.util.function.IntBinaryOperator
@@ -11,13 +12,13 @@ class FunctionsTest {
     @Test
     fun testEsMultiploOk() {
 
-        assertThat(Funciones.esMultiplo(10, 2)).isTrue()
+        assertThat(10 esMultiplo 2).isTrue()
     }
 
     @Test
     fun testEsMultiploFail() {
 
-        assertThat(Funciones.esMultiplo(10, 3)).isFalse()
+        assertThat(10 esMultiplo 3).isFalse()
     }
 
     @Test
@@ -82,15 +83,9 @@ class FunctionsTest {
 
     @Test
     fun testSecuenciaUno() {
-//        print(" sdf " + Funciones.secuenciaUno(3))
 
-        val res = IntStream.range(1, 4)
-                .mapToDouble { 1 / it.toDouble() }
-                .reduce{ left, ri -> left + ri}
 
-        print("res: $res")
-
-        assertThat(Funciones.secuenciaUno(3)).isEqualTo(0.3)
+        assertThat(Funciones.secuenciaUno(3)).isEqualTo(1.8333333333333333)
     }
 
 }
