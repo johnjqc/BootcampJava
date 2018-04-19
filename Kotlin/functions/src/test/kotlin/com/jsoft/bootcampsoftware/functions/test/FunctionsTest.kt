@@ -2,10 +2,12 @@ package com.jsoft.bootcampsoftware.functions.test
 
 import com.jsoft.bootcampsoftware.functions.Funciones
 import com.jsoft.bootcampsoftware.functions.Funciones.esMultiplo
+import com.jsoft.bootcampsoftware.functions.Funciones.esPar
+import com.jsoft.bootcampsoftware.functions.Funciones.esInpar
+import com.jsoft.bootcampsoftware.functions.Funciones.esBiciesto
+import com.jsoft.bootcampsoftware.functions.Funciones.secuenciaUno
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
-import java.util.function.IntBinaryOperator
-import java.util.stream.IntStream
 
 class FunctionsTest {
 
@@ -24,37 +26,37 @@ class FunctionsTest {
     @Test
     fun testEsParOk() {
 
-        assertThat(Funciones.esPar(10)).isTrue()
+        assertThat(10.esPar()).isTrue()
     }
 
     @Test
     fun testEsParFail() {
 
-        assertThat(Funciones.esPar(9)).isFalse()
+        assertThat(9.esPar()).isFalse()
     }
 
     @Test
     fun testEsInparOk() {
 
-        assertThat(Funciones.esInpar(9)).isTrue()
+        assertThat(9.esInpar()).isTrue()
     }
 
     @Test
     fun testEsInparFail() {
 
-        assertThat(Funciones.esInpar(10)).isFalse()
+        assertThat(10.esInpar()).isFalse()
     }
 
     @Test
     fun testEsViciestoOk() {
 
-        assertThat(Funciones.esBiciesto(2016)).isTrue()
+        assertThat(2016.esBiciesto()).isTrue()
     }
 
     @Test
     fun testEsViciestoFail() {
 
-        assertThat(Funciones.esBiciesto(1900)).isFalse()
+        assertThat(1900.esBiciesto()).isFalse()
     }
 
     @Test
@@ -85,7 +87,7 @@ class FunctionsTest {
     fun testSecuenciaUno() {
 
 
-        assertThat(Funciones.secuenciaUno(3)).isEqualTo(1.8333333333333333)
+        assertThat(3.secuenciaUno()).isEqualTo(1.8333333333333333)
     }
 
 }

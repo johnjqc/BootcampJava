@@ -10,15 +10,15 @@ object Funciones {
 
     infix fun Int.esMultiplo(numero:Int):Boolean = this % numero == 0
 
-    fun esPar(numero: Int) = numero esMultiplo NUMERO_MULTIPLO_DE_PAR
+    fun Int.esPar() = this esMultiplo NUMERO_MULTIPLO_DE_PAR
 
-    fun esInpar(numero: Int) = esPar(numero).not()
+    fun Int.esInpar() = this.esPar().not()
 
-    fun esBiciesto(year: Int) = year esMultiplo 4 && (year esMultiplo 400 || (year esMultiplo 100).not())
+    fun Int.esBiciesto() = this esMultiplo 4 && (this esMultiplo 400 || (this esMultiplo 100).not())
 
     fun numeroMayor(vararg numeros:Int) = numeros.max()
 
-    fun secuenciaUno(valor:Int):Double = IntStream.range(1, valor + 1)
+    fun Int.secuenciaUno():Double = IntStream.range(1, this + 1)
             .mapToDouble { 1 doubleDiv it }
             .reduce{ left, right -> left + right}
             .orElse(0.0)
